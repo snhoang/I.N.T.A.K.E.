@@ -1,18 +1,18 @@
 import React from "react";
 
-function Form({ q, handleInputChange, handleFormSubmit }) {
+function Signup({ q, handleInputChange, handleFormSubmit }) {
   return (
     <form>
       <div className="form-group">
         <label htmlFor="Query">
-          <strong>Beverage: </strong>
+          <strong>Name: </strong>
         </label>
         <input
           className="form-control"
           id="Title"
           type="text"
           value={q}
-          placeholder="What is it?"
+          placeholder="Indiana Jones"
           name="q"
           onChange={handleInputChange}
           required
@@ -20,14 +20,14 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
         <br></br>
         <br></br>
         <label htmlFor="Query">
-          <strong>Volume (fl oz): </strong>
+          <strong>Email: </strong>
         </label>
         <input
           className="form-control"
           id="Title"
           type="text"
           value={q}
-          placeholder="How much?"
+          placeholder="example@gmail.com"
           name="q"
           onChange={handleInputChange}
           required
@@ -35,49 +35,18 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
         <br></br>
         <br></br>
         <label htmlFor="Query">
-          <strong>Alcohol Content: </strong>
+          <strong>Password </strong>
         </label>
         <input
           className="form-control"
           id="Title"
           type="text"
           value={q}
-          placeholder="How much alcohol?"
+          placeholder="***************"
           name="q"
           onChange={handleInputChange}
           required
         />
-        <br></br>
-        <br></br>
-        <label htmlFor="Query">
-          <strong>Caffeine Content: </strong>
-        </label>
-        <input
-          className="form-control"
-          id="Title"
-          type="text"
-          value={q}
-          placeholder="How many miligrams of caffeine?"
-          name="q"
-          onChange={handleInputChange}
-          required
-        />
-        <br></br>
-        <br></br>
-        <label htmlFor="Query">
-          <strong>Sugar Content: </strong>
-        </label>
-        <input
-          className="form-control"
-          id="Title"
-          type="text"
-          value={q}
-          placeholder="How many grams of sugar?"
-          name="q"
-          onChange={handleInputChange}
-          required
-        />
-        <br></br>
         <br></br>
       </div>
       <div className="text-center pull-right">
@@ -86,11 +55,11 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
           type="submit"
           className="btn btn-lg btn-danger"
         >
-          + beverage
+          Sign Up
         </button>
       </div>
     </form>
   );
 }
 
-export default Form;
+export default Signup;
