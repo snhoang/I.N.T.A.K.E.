@@ -66,11 +66,13 @@ class Dashboard extends Component {
                 (insert daily stats here)
                 <br></br>
                 <br></br>
-                <button
-                  type="submit"
-                  className="btn btn-lg btn-primary">
-                  see details
-              </button>
+                <a href="/alcohol">
+                  <button
+                    type="submit"
+                    className="btn btn-lg btn-primary">
+                    see details
+                  </button>
+                </a>
               </h2>
             </Jumbotron>
           </Col>
@@ -83,11 +85,13 @@ class Dashboard extends Component {
                 (insert daily stats here)
                 <br></br>
                 <br></br>
-                <button
-                  type="submit"
-                  className="btn btn-lg btn-primary">
-                  see details
-              </button>
+                <a href="/caffeine">
+                  <button
+                    type="submit"
+                    className="btn btn-lg btn-primary">
+                    see details
+                  </button>
+                </a>
               </h2>
             </Jumbotron>
           </Col>
@@ -102,11 +106,13 @@ class Dashboard extends Component {
                 (insert daily stats here)
                 <br></br>
                 <br></br>
-                <button
-                  type="submit"
-                  className="btn btn-lg btn-primary">
-                  see details
-              </button>
+                <a href="/sugar">
+                  <button
+                    type="submit"
+                    className="btn btn-lg btn-primary">
+                    see details
+                  </button>
+                </a>
               </h2>
             </Jumbotron>
           </Col>
