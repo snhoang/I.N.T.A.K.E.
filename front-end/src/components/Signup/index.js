@@ -51,8 +51,7 @@ function Signup({ q, handleInputChange, submitSignupInformationToSignupApi }) {
       </div>
       <div className="text-center pull-right">
         <button
-          onClick={() => submitSignupInformationToSignupApi}
-          type="submit"
+          onClick={submitSignupInformationToSignupApi}
           className="btn btn-lg btn-danger"
         >
           Sign Up

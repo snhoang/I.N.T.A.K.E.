@@ -29,7 +29,7 @@ function Login({ q, handleInputChange, submitLoginInformationToLoginApi }) {
           <button
             type="submit"
             className="btn btn-lg btn-danger"
-            onClick={() => submitLoginInformationToLoginApi}
+            onClick={submitLoginInformationToLoginApi}
           >
             Login
           </button>
