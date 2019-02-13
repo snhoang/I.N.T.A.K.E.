@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-
+const passport = require("passport");
 
 // routes import
 const userRoutes = require("./routes/user-routes.js")
@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 //mongo configuration
-mongoose.connect("mongodb+srv://test1234:test1234@cluster0-sjwmf.mongodb.net/test?retryWrites=true");
+mongoose.connect("mongodb+srv://test1234:test1234@cluster0-sjwmf.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, 'connection error: '));
 db.once('open', () => {
@@ -26,8 +26,9 @@ db.once('open', () => {
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cors());
+app.use(passport.initialize())
 
-
+// PASSPORT
 
 
 // Use Routes

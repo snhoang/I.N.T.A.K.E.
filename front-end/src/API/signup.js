@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default (name, email, password) => {
-    axios.post("the post route for login", {
+    axios.post("/user/signup", {
         name: name,
         email: email,
         password: password
