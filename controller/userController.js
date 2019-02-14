@@ -8,9 +8,6 @@ const userController = {
         // obtain data from front-end
         const { email, password } = req.body;
 
-        // compare hash and decrypt password
-
-
         //check if username and password is in database
         userModel.find({ email: email }, (err, user) => {
             if (err) {

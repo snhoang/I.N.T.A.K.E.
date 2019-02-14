@@ -3,32 +3,29 @@ import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
-// import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
+import getNutrients from "./../API/getnutrients.js"
+
 
 class Add extends Component {
   state = {
-    books: []
+    drinks: []
   };
 
-  // componentDidMount() {
-  //   this.getSavedBooks();
-  // }
+  componentDidMount() {
+    getNutrients();
+  }
 
-  // getSavedBooks = () => {
-  //   API.getSavedBooks()
-  //     .then(res =>
-  //       this.setState({
-  //         books: res.data
-  //       })
-  //     )
-  //     .catch(err => console.log(err));
-  // };
-
-  // handleBookDelete = id => {
-  //   API.deleteBook(id).then(res => this.getSavedBooks());
-  // };
+  getLoggedDrinks = () => {
+    getNutrients.getLoggedDrinks()
+      .then(res =>
+        this.setState({
+          drinks: res.data
+        })
+      )
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (
@@ -57,27 +54,8 @@ class Add extends Component {
         <Row>
           <Col size="md-12">
             <Card title="Recently Logged Drinks" icon="">
-              {this.state.books.length ? (
+              {this.state.drinks.length ? (
                 <List>
-                  {/* {this.state.books.map(book => (
-                    <Book
-                      key={book._id}
-                      title={book.title}
-                      subtitle={book.subtitle}
-                      link={book.link}
-                      authors={book.authors.join(", ")}
-                      description={book.description}
-                      image={book.image}
-                      Button={() => (
-                        <button
-                          onClick={() => this.handleBookDelete(book._id)}
-                          className="btn btn-danger ml-2"
-                        >
-                          Delete
-                        </button>
-                      )}
-                    />
-                  ))} */}
                 </List>
               ) : (
                   <h2 className="text-center">No drinks?! You must be thirsty AF.</h2>

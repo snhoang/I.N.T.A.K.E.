@@ -12,4 +12,3 @@ module.exports = passport.use(new LocalStrategy(
         });
     }
 ));
-

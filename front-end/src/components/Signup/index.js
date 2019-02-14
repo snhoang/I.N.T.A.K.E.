@@ -35,12 +35,12 @@ function Signup({ q, handleInputChange, submitSignupInformationToSignupApi }) {
         <br></br>
         <br></br>
         <label htmlFor="Query">
-          <strong>Password </strong>
+          <strong>Password: </strong>
         </label>
         <input
           className="form-control"
           id="signupPassword"
-          type="text"
+          type="password"
           value={q}
           placeholder="***************"
           name="q"
