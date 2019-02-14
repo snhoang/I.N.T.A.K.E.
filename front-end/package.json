@@ -2,9 +2,10 @@
   "name": "intakeapp",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:4000",
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",

@@ -22,6 +22,7 @@ function Login({ q, handleInputChange, submitLoginInformationToLoginApi }) {
         <input
           className="form-control"
           id="password"
+          type="password"
           placeholder="***************"
         />
         <br></br>
